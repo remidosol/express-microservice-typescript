@@ -1,0 +1,52 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  host: localhost
+apiEndpoints:
+  client:
+    host: localhost
+    paths: '/v1/client/*'
+  book:
+    host: localhost
+    paths: '/v1/book/*'
+serviceEndpoints:
+  client-service:
+    url: 'http://localhost:8000/api/v1/'
+  book-service:
+    url: 'http://localhost:8001/api/v1/'
+policies:
+  - cors
+  - log
+  - proxy
+pipelines:
+  client:
+    apiEndpoints:
+      - client
+    policies:
+      - cors:
+          - action:
+              origin: false
+      - proxy:
+          - action:
+              serviceEndpoint: client-service 
+              changeOrigin: true
+              prependPath: false
+      - log:
+        - action:
+            message: ${req.method} ${req.originalUrl}
+  book:
+    apiEndpoints:
+      - book
+    policies:
+      - cors:
+          - action:
+              origin: false
+      - proxy:
+          - action:
+              serviceEndpoint: book-service 
+              changeOrigin: true
+              prependPath: false
+      - log:
+        - action:
+            message: ${req.method} ${req.originalUrl}
