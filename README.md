@@ -15,11 +15,11 @@ client-service has built to authenticate users for adding books that have been f
 
 book-service has built to provide the books data for searching books and creating bookmarks.
 
-### `Tech Stack`: ExpressJS, JSON Web Token, Sequelize(Typescript), Umzug, Winston(logger), Axios, Express-Gateway, Bcrypt | Argon2, ESlint & Prettier, axios-logger
+### `Tech Stack`: ExpressJS, JSON Web Token, Sequelize(Typescript), MySQL, Umzug, Winston(logger), Axios, Express-Gateway, Bcrypt | Argon2, ESlint & Prettier, axios-logger
 
 
 
-# Configuration
+# Configuration and Initialization
 
 API Gateway port is set to `8080` by default.
 ## Environment Variables' Configurations
@@ -36,11 +36,11 @@ I had generated as 2048 bits key size to use.
 
 Feel free to change them.
 
-## ESLint and Prettier Configuration
+## MySQL Configuration
 
-ESLint and Prettier configurations have been done in [`book-service/.eslintrc.json`](./book-service/.eslintrc.json), [`book-service/.prettierrc.json`](./book-service.prettierrc.json) files and [`client-service/.prettierrc.json`](./client-service.prettierrc.json),[`client-service/.prettierrc.json`](./client-service.prettierrc.json), 
+You should create your schemas for both of services in MySQL.
 
-There are not much rules, so you're free to change the rules.
+e.g. I had created schemas as respectively book_service and auth_service.
 
 
 # Install & Run
