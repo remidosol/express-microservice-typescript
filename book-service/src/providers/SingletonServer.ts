@@ -47,7 +47,7 @@ export class SingletonServer {
           }
         })()
 
-        await this._dbConnection.sync({ force: true }) // force: true
+        await this._dbConnection.sync({ }) // force: true
 
         console.log(
           'Connection has been established and models synced successfully.'
