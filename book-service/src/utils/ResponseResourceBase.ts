@@ -62,7 +62,7 @@ SuccessResponseResource.getInstance()
 export const successResponseResource = SuccessResponseResource.getInstance()
 
 /**
- * @class ResponseResource
+ * @class ErrorResponseResource
  *
  * @description Has been created for wrapping, manipulating and to provide common Express Response
  */

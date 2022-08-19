@@ -58,7 +58,7 @@ export class BooksController {
   }
 
   /**
-   * listBookmarks
+   * @function listBookmarks
    *
    * @param req Mutated Express Request Object Interface
    * @param res Mutated Express Response Object Interface
@@ -95,7 +95,7 @@ export class BooksController {
   }
 
   /**
-   * addBookmark
+   * @function addBookmark
    *
    * @param req Mutated Express Request Object Interface
    * @param res Mutated Express Response Object Interface
@@ -183,7 +183,7 @@ export class BooksController {
   }
 
   /**
-   * deleteBookmark
+   * @function deleteBookmark
    *
    * @param req Mutated Express Request Object Interface
    * @param res Mutated Express Response Object Interface
@@ -228,6 +228,16 @@ export class BooksController {
     }
   }
 
+  /**
+   * 
+   * @function searchBooks
+   * 
+   * @param req Mutated Express Request Object Interface
+   * @param res Mutated Express Response Object Interface
+   * @param next Express NextFunction Object Interface
+   * 
+   * @returns Search results as Partial<Item>[]
+   */
   static searchBooks = async (
     req: MutatedRequestI<{ query: string }>,
     res: MutatedResponseI<SuccessResponseI<Partial<Item>[]>>,

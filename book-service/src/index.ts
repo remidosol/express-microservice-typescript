@@ -1,7 +1,6 @@
 import { initDatabase } from './providers/index'
 import { getApp } from './server'
 import dotenv from 'dotenv'
-// import { SingletonServer } from './providers/SingletonServer'
 
 dotenv.config()
 

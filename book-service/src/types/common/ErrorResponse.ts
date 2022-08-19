@@ -4,6 +4,14 @@ export interface ErrorResponseI {
   statusCode: number
 }
 
+/**
+ * 
+ * @class ErrorResponse
+ * 
+ * @implements ErrorResponseI
+ * 
+ * @description Created to provide error response in express app
+ */
 export class ErrorResponse implements ErrorResponseI {
   constructor(message: string | string[], statusCode: number) {
     this.message = message

@@ -13,7 +13,6 @@ export const authApiConfig: AxiosRequestConfig = {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    // Authorization: `${process.env.BASIC}`
   },
 
 }
@@ -23,7 +22,6 @@ export const googleBooksApiConfig: AxiosRequestConfig<BookSearchTypes> = {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    // Authorization: `${process.env.BASIC}`
   },
   params: {
     apiKey: googleBooksApiKey

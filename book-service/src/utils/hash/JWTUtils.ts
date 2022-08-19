@@ -9,6 +9,13 @@ import {
 import { privateKey, publicKey } from '../ReadKeyUtils'
 import { signOptions, verifyOptions } from '../../config/index'
 
+
+/**
+ * @class JWTUtils
+ * 
+ * 
+ * @description Created for simplify JWT stuff
+ */
 export default class JWTUtils {
   static getJWTSigning = async (payload: string) => {
     return sign(payload, privateKey, signOptions)

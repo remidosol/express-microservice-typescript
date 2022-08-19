@@ -1,6 +1,15 @@
 import { Bookmark } from '../database/models/index'
 import { Item } from '../types/index'
 
+
+/**
+ * manipulateSearchBooks
+ * 
+ * @param items Comes in Google Books API body Item[]
+ * @returns manipulated items
+ * 
+ * @description  Created for manipulating Google Books API search response to match Bookmark
+ */
 export const manipulateSearchBooks = (
   items: Item[]
   // searchedContext: Partial<BookSearchTypes>

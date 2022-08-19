@@ -39,8 +39,5 @@ export const checkUser = async (
       message: exception.message,
       statusCode: exception.statusCode
     })
-    // next(
-    //   new UserNotFoundException('Please register or login to provide token!')
-    // )
   }
 }
