@@ -1,4 +1,4 @@
-# Microservice Architecture and Singleton Design Pattern Experiment with ExpressJS, Sequelize, JWT
+# Microservice Architecture and Singleton Design Pattern Experiment with ExpressJS, Sequelize, Google Books API, JWT
 
 I wanted to experience Singleton and Microservice techs in Node.js, therefore I created this project.
 
@@ -13,9 +13,9 @@ The API consists two microservices that respectively client-service and books-se
 
 client-service has built to authenticate users for adding books that have been fetching from book service to their bookmarks.
 
-book-service has built to provide the books data for searching books and creating bookmarks.
+book-service has built to provide the books data for searching books on Google Books API and creating bookmarks.
 
-### `Tech Stack`: ExpressJS, JSON Web Token, Sequelize(Typescript), MySQL, Umzug, Winston(logger), Axios, Express-Gateway, Bcrypt | Argon2, ESlint & Prettier, axios-logger
+### `Tech Stack`: Google Books API, ExpressJS, JSON Web Token, Sequelize(Typescript), MySQL, Umzug, Winston(logger), Axios, Express-Gateway, Bcrypt | Argon2, ESlint & Prettier, axios-logger
 
 
 
