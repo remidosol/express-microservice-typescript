@@ -85,4 +85,4 @@ node server.js
 
 # Learn More & Resources
 
-They will be added soon.
+Will be added soon.
