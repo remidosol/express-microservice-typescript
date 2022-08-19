@@ -15,6 +15,8 @@ client-service has built to authenticate users for adding books that have been f
 
 book-service has built to provide the books data for searching books and creating bookmarks.
 
+### `Tech Stack`: ExpressJS, JSON Web Token, Sequelize(Typescript), Umzug, Winston(logger), Axios, Express-Gateway, Bcrypt | Argon2, ESlint & Prettier, axios-logger
+
 
 
 # Configuration
