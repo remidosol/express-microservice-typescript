@@ -157,13 +157,13 @@ export class AuthController {
             })
           )
         } else {
-          return next(new UserNotFoundException('User not found!'))
+          next(new UserNotFoundException('User not found!'))
         }
       } else {
-        return next(new CredValidatorException('Please Login!'))
+        next(new CredValidatorException('Please Login!'))
       }
     } catch (err: any) {
-      return next(err)
+      next(err)
     }
   }
 }

@@ -18,7 +18,7 @@ export class BookRoutes extends CommonRoutes {
 
     bookRouter.get('/check_token', checkUser, BooksController.checkToken)
 
-    bookRouter.post('/list', checkUser, BooksController.listBookmarks)
+    bookRouter.get('/list', checkUser, BooksController.listBookmarks)
 
     bookRouter.post('/add', checkUser, BooksController.addBookmark)
 
