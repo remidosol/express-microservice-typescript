@@ -27,6 +27,14 @@ API Gateway port is set to `8080` by default.
 There are  `.env.example` files in both [`book-service`](./book-service/.env.example) and [`client-service`](./client-service/.env.example).
 
 Feel free to change them.
+## Public and Private Keys
+
+You should provide private key named as `private.pem` and public key names as `public.pem` in root directories of services.
+
+### You may use [`this`](http://travistidwell.com/jsencrypt/demo/) RSA key generator.
+I had generated as 2048 bits key size to use.
+
+Feel free to change them.
 
 ## ESLint and Prettier Configuration
 
