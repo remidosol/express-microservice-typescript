@@ -4,32 +4,32 @@ admin:
   port: 9876
   host: localhost
 apiEndpoints:
-  client:
+  auth:
     host: localhost
-    paths: '/v1/client/*'
+    paths: '/auth/*'
   book:
     host: localhost
-    paths: '/v1/book/*'
+    paths: '/books/*'
 serviceEndpoints:
-  client-service:
-    url: 'http://localhost:8000/api/v1/'
+  auth-service:
+    url: 'http://localhost:8000/auth/'
   book-service:
-    url: 'http://localhost:8001/api/v1/'
+    url: 'http://localhost:8001/books/'
 policies:
   - cors
   - log
   - proxy
 pipelines:
-  client:
+  auth:
     apiEndpoints:
-      - client
+      - auth
     policies:
       - cors:
           - action:
               origin: false
       - proxy:
           - action:
-              serviceEndpoint: client-service 
+              serviceEndpoint: auth-service 
               changeOrigin: true
               prependPath: false
       - log:
