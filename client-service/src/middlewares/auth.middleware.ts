@@ -1,13 +1,11 @@
 import { NextFunction } from 'express'
 import {
-  // ErrorResponse,
   MutatedResponseI,
   MutatedRequestI,
   ErrorResponseI,
 } from '../types/index'
 import {
   JWTUtils,
-  // getErrorAndMakeResource,
 } from '../utils/index'
 import { User } from '../database/models/index'
 import { UnauthorizedException } from '../exceptions/index'

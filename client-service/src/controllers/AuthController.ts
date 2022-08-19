@@ -27,8 +27,11 @@ type MutatedResponse = MutatedResponseI<SuccessResponseI<User> | ErrorResponseI>
  * @description Consists static functions/controllers that coded for auth service
  */
 export class AuthController {
+
+
   /**
-   * Register Controller
+   * @function register
+   * 
    * @param req Express Mutated Request
    * @param res Express Mutated Response
    * @returns Register Response
@@ -66,7 +69,7 @@ export class AuthController {
   }
 
   /**
-   * Login Controller
+   * @function login
    * @param req Express Request
    * @param res Express Mutated Response
    * @returns Login Response
@@ -119,11 +122,13 @@ export class AuthController {
   }
 
   /**
-   * Check Token Controller
-   * Checks user's token and returns user
+   * @function checkToken
+   * 
    * @param req Express MutatedRequestI Request
    * @param res Express Mutated Response
    * @returns Check Token Response
+   * 
+   * @description Checks user's token and returns user
    */
   static checkToken = async (
     req: MutatedRequestI<Pick<User, 'token'>>,
