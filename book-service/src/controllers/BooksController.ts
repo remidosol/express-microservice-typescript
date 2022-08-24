@@ -20,7 +20,7 @@ import {
 
 // import { DatabaseLogger } from '../providers/index'
 import { NextFunction } from 'express'
-import { AxiosBookInstance } from '../providers/index'
+import { AxiosBookInstance, RedisConnection } from '../providers/index'
 import { Bookmark } from '../database/models/index'
 
 type MutatedResponse = MutatedResponseI<
@@ -244,10 +244,11 @@ export class BooksController {
     next: NextFunction
   ) => {
     try {
-      if (req.body) {
+      const { query } = req.body
+      if (query) {
         const searchedBooks = await AxiosBookInstance.get<BookSearchTypes>('', {
           params: {
-            q: req.body.query,
+            q: query,
           },
         })
 
@@ -255,6 +256,8 @@ export class BooksController {
           const asBookmark = manipulateSearchBooks(searchedBooks.data.items)
 
           // console.log(searchedBooks.data)
+
+          await RedisConnection.setEx(query, 1800, JSON.stringify(asBookmark))
 
           return res.status(200).json(
             successResponseResource.success<Partial<Item>[]>({

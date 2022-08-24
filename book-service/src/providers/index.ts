@@ -6,4 +6,6 @@ export {
   DatabaseLogger,
   ExpressLogger,
   initDatabase,
+  RedisConnection,
+  initRedis
 } from './SingletonServer'

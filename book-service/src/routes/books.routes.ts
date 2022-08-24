@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { CommonRoutes } from './common.routes'
-import { checkUser, errorHandlerMiddleware } from '../middlewares/index'
+import { checkUser, errorHandlerMiddleware, checkCache } from '../middlewares/index'
 import { BooksController } from '../controllers/index'
 
 /**
@@ -24,7 +24,7 @@ export class BookRoutes extends CommonRoutes {
 
     bookRouter.delete('/delete', checkUser, BooksController.deleteBookmark)
 
-    bookRouter.post('/search', BooksController.searchBooks)
+    bookRouter.post('/search', checkCache, BooksController.searchBooks)
 
     bookRouter.use(errorHandlerMiddleware)
 

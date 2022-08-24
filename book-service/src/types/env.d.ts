@@ -12,6 +12,8 @@ declare namespace NodeJS {
     DEV_MYSQL_USERNAME: string;
     DEV_MYSQL_PASSWORD: string;
     DEV_MYSQL_SCHEMA: string;
+    REDIS_HOST: string;
+    REDIS_PORT: number;
     AUTH_API_BASE_URI: string;
     GOOGLE_BOOKS_API_BASE_URI: string;
     GOOGLE_BOOKS_API_KEY: string;

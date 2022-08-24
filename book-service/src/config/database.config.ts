@@ -67,20 +67,3 @@ export const migrator = new Umzug({
   storage: new SequelizeStorage({ sequelize: databaseConnection }),
   logger: DatabaseLogger,
 })
-
-// export const seeder = new Umzug({
-//   context: databaseConnection.getQueryInterface(),
-//   migrations: {
-//     glob: ['../database/seeders/*.ts', { cwd: __dirname }],
-//     resolve: ({ name, path, context }) => {
-//       const seed = require(path || '')
-//       return {
-//         name,
-//         up: async () => seed.up({ context }),
-//         down: async () => seed.down({ context }),
-//       }
-//     },
-//   },
-//   storage: new SequelizeStorage({ sequelize: databaseConnection }),
-//   logger: DatabaseLogger,
-// })
