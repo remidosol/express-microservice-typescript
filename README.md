@@ -33,7 +33,7 @@ Feel free to change their name as `.env` and set variables.
 
 ## API Gateway Configuration
 
-There are another configurations in [`gateway.config.yml`](./api-gateway/config)
+There are another configurations in [`gateway.config.yml`](./api-gateway/config/gateway.config.yml)
 
 ```yml
 http:
