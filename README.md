@@ -120,7 +120,7 @@ You should provide private key named as `private.pem` and public key named as `p
 
 We read the keys in [here](./book-service/src/utils/ReadKeyUtils.ts) and [there](./client-service/src/utils/ReadKeyUtils.ts).
 
-### You may use [`this`](http://travistidwell.com/jsencrypt/demo/) RSA key generator. (RSA256)
+You may use [`this`](http://travistidwell.com/jsencrypt/demo/) RSA key generator. (RSA256)
 I had generated keys with 2048 bits key size to use.
 
 ### MySQL Configuration <a id="mysql"></a> [🔝][@jump-to-top]
