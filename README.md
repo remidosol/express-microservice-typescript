@@ -173,7 +173,7 @@ node server.js
 
 ## API Documentation <a id="api-docs"></a> [🔝][@jump-to-top]
 
-You can take a glance at [`Postman API Docs`](https://documenter.getpostman.com/view/6383857/VUqoRyqS).
+You can take a glance at [`Postman API Docs`](https://documenter.getpostman.com/view/23028637/VUr1FXwn).
 
 
 ## TODO <a id="to-do"></a>[🔝][@jump-to-top]
