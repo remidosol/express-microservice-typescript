@@ -12,5 +12,5 @@ app.listen(port, async () => {
   await initDatabase()
   await initRedis()
 
-  console.log(`Auth service listening at http://${process.env.HOST}:${port}`)
+  console.log(`Book service listening at http://${process.env.HOST}:${port}`)
 })
