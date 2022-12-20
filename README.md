@@ -192,7 +192,7 @@ Will be added soon.
 
 
 ## NOTE <a id="note"></a> [🔝][@jump-to-top]
-If you're going to develop bigger project, please consider to use IoC design paradigm with SOLID principles for implementing Dependency Injection pattern due to Singleton pattern've been started to seem as Anti-pattern.
+If you're going to develop bigger project, please consider to use IoC design paradigm with SOLID principles for implementing Dependency Injection pattern due to Singleton pattern has been started to seem as Anti-pattern.
 ([InversifyJS](https://github.com/inversify/InversifyJS/blob/master/wiki/readme.md) || [TypeDI](https://docs.typestack.community/typedi/v/develop/01-getting-started))
 
 
